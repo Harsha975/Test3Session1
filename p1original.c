@@ -12,7 +12,13 @@ void add(int num1,int den1, int num2, int den2, int *num3, int *den3)
   for( i=2;i<*num3&&*num3;i++)
     {
       if (den1 == den2 )
+      {
+        *num3=*num3/den1;
+        *den3=*den3/den2;
         break;
+    //    while(*num3 % *den3 == 0)
+          
+      }
       else if((*num3 % i)==0 && (*den3 % i) ==0)
         { 
         *num3=*num3/i;
