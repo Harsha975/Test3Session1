@@ -1,1 +1,5 @@
+ ./a.out
+enter the strings
+hii my name is harsha
+the number of words in the string is = 5 
 

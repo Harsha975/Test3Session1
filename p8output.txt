@@ -1,1 +1,13 @@
+ ./a.out
+enter the no of fraction
+3
+enter the num and den
+1 2
+enter the num and den
+3 4
+enter the num and den
+5 6
+1/2 +   3/4 +     5/6  is 25/12 
+ 
+
 

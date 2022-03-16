@@ -3,7 +3,7 @@
 void input_string(char *a)
 {
   printf("enter the strings\n");
-  scanf("%s",a);
+  scanf("%[^\n]s",a);
 }
 int count_words(char *string)
 {
@@ -12,13 +12,13 @@ int count_words(char *string)
   while(a!=NULL)
     {
       count++;
-      char *a=strtok(NULL," ");
+      a=strtok(NULL," ");
     }
   return count;
 }
 void output(char *string,int no_words)
 {
-  printf("%d",no_words);
+  printf("the number of words in the string is = %d",no_words);
 }
 int main()
 {

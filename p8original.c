@@ -15,12 +15,26 @@ int find_gcd(int a,int b)
   return c;
   
 }
+int input_n()
+{
+  int a;
+  printf("enter the no of fraction\n");
+  scanf("%d",&a);
+  return a;
+}
 fraction input_fraction()
 {
   fraction f;
   printf("enter the num and den\n");
   scanf("%d\t%d",&f.num,&f.den);
   return f;
+}
+void input_in_fraction(int n,fraction f[n])
+{
+  for(int i=0;i<n;i++)
+    {
+      f[i]=input_fraction();
+    }
 }
 
 fraction add_fraction(fraction f1,fraction f2)
@@ -33,15 +47,30 @@ fraction add_fraction(fraction f1,fraction f2)
   sum.den=sum.den/g;
   return sum;
 }
-void output(fraction f1,fraction f2,fraction sum)
+fraction add_n_fraction(int n,fraction f[n])
 {
-  printf("%d/%d + %d/%d is %d/%d",f1.num,f1.den,f2.num,f2.den,sum.num,sum.den);
+  fraction sum;
+  sum=f[0];
+  for(int i=1;i<n;i++)
+    {
+      sum=add_fraction(sum,f[i]);
+    }
+  return sum;
+}
+void output(int n, fraction f[n], fraction sum)
+{
+  for(int i=0;i<n-1;i++)
+    {
+      printf("%d/%d\t+\t",f[i].num,f[i].den);
+    }
+  printf("  %d/%d  is %d/%d \n",f[n-1].num,f[n-1].den,sum.num,sum.den);
 }
 int main()
 {
-  fraction f1=input_fraction();
-  fraction f2=input_fraction();
-  fraction sum=add_fraction(f1,f2);
-  output(f1,f2,sum);
+  int n=input_n();
+  fraction f[n];
+  input_in_fraction(n,f);
+  fraction sum=add_n_fraction(n,f);
+  output(n,f,sum);
   return 0;
 }

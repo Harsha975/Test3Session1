@@ -1,1 +1,9 @@
+./a.out
+enter the size of array
+3
+enter the elements of array
+1 2 3
+the index of the largest number in the array is 2 
+
+
 

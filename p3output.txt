@@ -1,1 +1,4 @@
-
+ ./a.out
+enter the values of n and r
+5 3
+the ncr with 5 and 3 is 10 

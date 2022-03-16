@@ -1,1 +1,7 @@
+./a.out
+enter the num and den
+1 2
+enter the num and den
+3 4
+1/2 + 3/4 is 5/4 
 
